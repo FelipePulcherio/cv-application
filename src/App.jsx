@@ -1,11 +1,16 @@
+import { useState } from 'react';
 import Grid from '@mui/material/Unstable_Grid2';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
-import VerticalToggleMenu from './VerticalToggleMenu.jsx'
-import './App.scss'
+import VerticalToggleMenu from './VerticalToggleMenu.jsx';
+import VerticalForm from './VerticalForm.jsx';
+
+import './App.scss';
 
 export default function App() {
+
+  const [activeComponent, setActiveComponent] = useState('Content');
 
   return (
     <Box sx={{p: 2.5}}>
@@ -15,12 +20,17 @@ export default function App() {
           <Grid container columns={12} spacing={2.5}>
             <Grid xs={12} lg={3}>
               <Paper elevation={3} sx={{p: 1.5}}>
-                <VerticalToggleMenu />
+                <VerticalToggleMenu 
+                  handleClick1={() => setActiveComponent('Content')}
+                  handleClick2={() => setActiveComponent('Customize')}/>
               </Paper>
             </Grid>
 
             <Grid xs={12} lg={9}>
-              <div className="test">Component 2</div>
+              <VerticalForm 
+                isActive={activeComponent}
+                >
+              </VerticalForm>
             </Grid>
           </Grid>
         </Grid>
