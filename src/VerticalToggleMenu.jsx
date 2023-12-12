@@ -6,8 +6,11 @@ import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
 import EditNoteOutlinedIcon from '@mui/icons-material/EditNoteOutlined';
 import './VerticalToggleMenu.scss';
 
-export default function VerticalToggleMenu() {
-  const [view, setView] = useState('content');
+export default function VerticalToggleMenu({
+  handleClick1,
+  handleClick2
+}) {
+  const [view, setView] = useState('Content');
 
   const handleChange = (event, nextView) => {
     if (nextView !== null) {
@@ -26,14 +29,28 @@ export default function VerticalToggleMenu() {
       onChange={handleChange}
       fullWidth
     >
-      <ToggleButton className='toggleButton' disableRipple value="content" aria-label="content">
-        <DescriptionOutlinedIcon />
-        <Box>Content</Box>
+      <ToggleButton 
+        className='toggleButton' 
+        disableRipple 
+        value="Content" 
+        aria-label="Content"
+        onClick={handleClick1}
+        >
+          <DescriptionOutlinedIcon />
+          <Box>Content</Box>
       </ToggleButton>
-      <ToggleButton className='toggleButton' disableRipple value="customize" aria-label="customize">
-        <EditNoteOutlinedIcon />
-        <Box>Customize</Box>
+
+      <ToggleButton 
+        className='toggleButton' 
+        disableRipple 
+        value="Customize" 
+        aria-label="Customize"
+        onClick={handleClick2}
+        >
+          <EditNoteOutlinedIcon />
+          <Box>Customize</Box>
       </ToggleButton>
+
     </ToggleButtonGroup>
   )
 }
