@@ -27,10 +27,12 @@ export default function App() {
             </Grid>
 
             <Grid xs={12} lg={9}>
-              <VerticalForm 
-                isActive={activeComponent}
-                >
-              </VerticalForm>
+              <Paper elevation={3} sx={{p: 1.5}}>
+                <VerticalForm
+                  isActive={activeComponent}
+                  >
+                </VerticalForm>
+              </Paper>
             </Grid>
           </Grid>
         </Grid>
