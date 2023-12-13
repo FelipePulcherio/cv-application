@@ -14,6 +14,31 @@ export default function App() {
 
   const [activeComponent, setActiveComponent] = useState('Content');
 
+
+  const [fullName, setFullName] = useState('Daniel Reynolds');
+
+  function handleNameChange (e) {
+    setFullName(e.target.value);
+  }
+
+  const [email, setEmail] = useState('daniel.reynolds@provider.com');
+
+  function handleEmailChange (e) {
+    setEmail(e.target.value);
+  }
+
+  const [phone, setPhone] = useState('+1 123 456 7899');
+
+  function handlePhoneChange (e) {
+    setPhone(e.target.value);
+  }
+
+  const [address, setAddress] = useState('New Westminster, BC');
+
+  function handleAddressChange (e) {
+    setAddress(e.target.value);
+  }
+
   return (
     <Box sx={{p: 2.5}}>
       <Grid container disableEqualOverflow spacing={2.5}>
@@ -34,8 +59,16 @@ export default function App() {
               </Paper>
               
               <VerticalForm
-                isActive={activeComponent}/>
-
+                isActive={activeComponent}
+                nameValue={fullName}
+                nameChange={handleNameChange}
+                emailValue={email}
+                emailChange={handleEmailChange}
+                phoneValue={phone}
+                phoneChange={handlePhoneChange}
+                addressValue={address}
+                addressChange={handleAddressChange}
+                />
             </Grid>
           </Grid>
         </Grid>
@@ -43,7 +76,12 @@ export default function App() {
         <Grid xs={7} md={8} lg={7}>
           <Grid container columns={12}>
             <Grid xs={12}>
-              <Resume />
+              <Resume 
+                fullName={fullName}
+                email={email}
+                phone={phone}
+                address={address}
+              />
             </Grid>
           </Grid>
         </Grid>

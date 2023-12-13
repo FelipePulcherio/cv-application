@@ -7,7 +7,16 @@ import AccordionEDEX from './AccordionEDEX.jsx';
 import './VerticalForm.scss';
 
 // 'Content' Form: Personal details
-function ContentFormPD () {
+function ContentFormPD ({
+  nameValue,
+  nameChange,
+  emailValue,
+  emailChange,
+  phoneValue,
+  phoneChange,
+  addressValue,
+  addressChange
+}) {
   return (
     <Paper elevation={3} sx={{p: 1.5, mb: 2.5}}>
       <Box 
@@ -33,6 +42,8 @@ function ContentFormPD () {
           size='small' 
           fullWidth
           margin='normal'
+          onChange={nameChange}
+          value={nameValue}
         />
 
         <TextField 
@@ -42,6 +53,8 @@ function ContentFormPD () {
           size='small' 
           margin='normal'
           fullWidth
+          onChange={emailChange}
+          value={emailValue}
         />
 
         <TextField 
@@ -51,6 +64,8 @@ function ContentFormPD () {
           size='small' 
           margin='normal'
           fullWidth
+          onChange={phoneChange}
+          value={phoneValue}
         />
 
         <TextField 
@@ -60,6 +75,8 @@ function ContentFormPD () {
           size='small' 
           margin='normal'
           fullWidth
+          onChange={addressChange}
+          value={addressValue}
         />
       </Box>
     </Paper>
@@ -73,7 +90,15 @@ function CustomizeForm () {
 
 // Main function
 export default function VerticalForm ({
-    isActive
+    isActive,
+    nameValue,
+    nameChange,
+    emailValue,
+    emailChange,
+    phoneValue,
+    phoneChange,
+    addressValue,
+    addressChange
   }) {
     return (
       <>
@@ -82,7 +107,16 @@ export default function VerticalForm ({
             case 'Content':
               return (
                 <>
-                  <ContentFormPD />
+                  <ContentFormPD 
+                    nameValue={nameValue} 
+                    nameChange={nameChange}
+                    emailValue={emailValue}
+                    emailChange={emailChange}
+                    phoneValue={phoneValue}
+                    phoneChange={phoneChange}
+                    addressValue={addressValue}
+                    addressChange={addressChange}
+                  />
                   <AccordionEDEX />
                 </>
                 );

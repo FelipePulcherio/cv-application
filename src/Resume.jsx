@@ -6,13 +6,18 @@ import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import PlaceIcon from '@mui/icons-material/Place';
 
-function Heading () {
+function Heading ({
+  fullName,
+  email,
+  phone,
+  address
+}) {
   return (
     <Box 
       className='resumeHeading'
       sx={{
         color: 'white',
-        bgcolor: 'black',
+        bgcolor: 'primary.main',
         p: 1.5, 
         mb:5
       }}
@@ -25,7 +30,7 @@ function Heading () {
         mb: 1.5
         }}
         >
-        Teste
+        {fullName}
       </Box>
 
       <Stack direction='row' spacing={3.5} flexWrap="wrap" justifyContent='center' alignItems='center' sx={{mb: 1.5}}>
@@ -36,7 +41,7 @@ function Heading () {
           gap: 1}}
           >
             <EmailIcon />
-            asd@asd.com
+            {email}
         </Box>
         
         <Box sx={{
@@ -46,7 +51,7 @@ function Heading () {
           gap: 1}}
           >
             <PhoneIcon />
-            +1 778 939 8663
+            {phone}
         </Box>
 
         <Box sx={{
@@ -56,7 +61,7 @@ function Heading () {
           gap: 1}}
           >
             <PlaceIcon />
-            New Westminster, BC
+            {address}
         </Box>
       </Stack>
     </Box>
@@ -168,10 +173,20 @@ function Experience () {
   )
 }
 
-export default function Resume () {
+export default function Resume ({
+  fullName,
+  email,
+  phone,
+  address
+}) {
   return (
     <Paper elevation={3}>
-      <Heading />
+      <Heading 
+        fullName={fullName}
+        email={email}
+        phone={phone}
+        address={address}
+      />
       <Education />
       <Experience />
     </Paper>
