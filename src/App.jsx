@@ -3,6 +3,7 @@ import Grid from '@mui/material/Unstable_Grid2';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
+import BasicFill from './BasicFill.jsx';
 import VerticalToggleMenu from './VerticalToggleMenu.jsx';
 import VerticalForm from './VerticalForm.jsx';
 
@@ -26,12 +27,16 @@ export default function App() {
             </Grid>
 
             <Grid xs={12} lg={9}>
+
+              <Paper elevation={3} sx={{p: 1.5, mb: 2.5}}>
+                <BasicFill />
+              </Paper>
+              
               <Paper elevation={3} sx={{p: 1.5}}>
                 <VerticalForm
-                  isActive={activeComponent}
-                  >
-                </VerticalForm>
+                  isActive={activeComponent}/>
               </Paper>
+
             </Grid>
           </Grid>
         </Grid>
