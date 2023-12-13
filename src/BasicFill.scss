@@ -1,0 +1,14 @@
+button {
+  &.clear, &.loadExample {
+    text-transform: none;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  &.clear {
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}
