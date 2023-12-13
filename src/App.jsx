@@ -27,7 +27,7 @@ export default function App() {
     setEmail(e.target.value);
   }
 
-  const [phone, setPhone] = useState('+1 123 456 7899');
+  const [phone, setPhone] = useState('+1 123 456 7890');
 
   function handlePhoneChange (e) {
     setPhone(e.target.value);
@@ -55,7 +55,12 @@ export default function App() {
             <Grid xs={12} lg={9}>
 
               <Paper elevation={3} sx={{p: 1.5, mb: 2.5}}>
-                <BasicFill />
+                <BasicFill 
+                  nameChange={setFullName}
+                  emailChange={setEmail}
+                  phoneChange={setPhone}
+                  addressChange={setAddress}
+                />
               </Paper>
               
               <VerticalForm
