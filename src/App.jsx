@@ -6,6 +6,7 @@ import Paper from '@mui/material/Paper';
 import BasicFill from './BasicFill.jsx';
 import VerticalToggleMenu from './VerticalToggleMenu.jsx';
 import VerticalForm from './VerticalForm.jsx';
+import Resume from './Resume.jsx';
 
 import './App.scss';
 
@@ -42,7 +43,7 @@ export default function App() {
         <Grid xs={7} md={8} lg={7}>
           <Grid container columns={12}>
             <Grid xs={12}>
-              <div className="test">Component 3</div>
+              <Resume />
             </Grid>
           </Grid>
         </Grid>
