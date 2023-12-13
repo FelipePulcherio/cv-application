@@ -21,8 +21,7 @@ export default function App() {
             <Grid xs={12} lg={3}>
               <Paper elevation={3} sx={{p: 1.5}}>
                 <VerticalToggleMenu 
-                  handleClick1={() => setActiveComponent('Content')}
-                  handleClick2={() => setActiveComponent('Customize')}/>
+                  handleClick={setActiveComponent}/>
               </Paper>
             </Grid>
 
