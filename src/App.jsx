@@ -32,10 +32,8 @@ export default function App() {
                 <BasicFill />
               </Paper>
               
-              <Paper elevation={3} sx={{p: 1.5}}>
-                <VerticalForm
-                  isActive={activeComponent}/>
-              </Paper>
+              <VerticalForm
+                isActive={activeComponent}/>
 
             </Grid>
           </Grid>
@@ -53,13 +51,10 @@ export default function App() {
   )
 }
 
-/* https://sharkri.github.io/cv-application/
-https://mui.com/material-ui/customization/theme-components/#theme-default-props
-https://mui.com/material-ui/react-toggle-button/
-https://mui.com/material-ui/api/toggle-button-group/
-https://mui.com/material-ui/customization/how-to-customize/
+/* 
+https://sharkri.github.io/cv-application/
+https://mui.com/material-ui/react-button/
+https://mui.com/material-ui/react-stack/
+https://mui.com/material-ui/material-icons/
 https://mui.com/system/spacing/
-https://stackoverflow.com/questions/71146989/material-ui-toggle-button-color
-https://stackoverflow.com/questions/63974150/material-ui-toggle-button-cant-change-background-color-when-selected
-
  */
