@@ -7,8 +7,7 @@ import EditNoteOutlinedIcon from '@mui/icons-material/EditNoteOutlined';
 import './VerticalToggleMenu.scss';
 
 export default function VerticalToggleMenu({
-  handleClick1,
-  handleClick2
+  handleClick
 }) {
   const [view, setView] = useState('Content');
 
@@ -34,7 +33,7 @@ export default function VerticalToggleMenu({
         disableRipple 
         value="Content" 
         aria-label="Content"
-        onClick={handleClick1}
+        onClick={() => handleClick('Content')}
         >
           <DescriptionOutlinedIcon />
           <Box>Content</Box>
@@ -45,7 +44,7 @@ export default function VerticalToggleMenu({
         disableRipple 
         value="Customize" 
         aria-label="Customize"
-        onClick={handleClick2}
+        onClick={() => handleClick('Customize')}
         >
           <EditNoteOutlinedIcon />
           <Box>Customize</Box>
