@@ -27,13 +27,13 @@ function Heading ({
         fontWeight:600, 
         textAlign:'center', 
         mt: 2.5,
-        mb: 1.5
+        mb: 2
         }}
         >
         {fullName}
       </Box>
 
-      <Stack direction='row' spacing={3.5} flexWrap="wrap" justifyContent='center' alignItems='center' sx={{mb: 1.5}}>
+      <Stack direction='row' gap={2} flexWrap="wrap" justifyContent='center' alignItems='center' sx={{mb: 1.5}}>
         <Box sx={{
           display: 'flex', 
           justifyContent:'center', 
