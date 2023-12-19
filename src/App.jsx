@@ -12,7 +12,7 @@ import './App.scss';
 
 export default function App() {
 
-  const [activeComponent, setActiveComponent] = useState('Content');
+  const [activeForm, setActiveForm] = useState('Content');
 
 
   const [fullName, setFullName] = useState('Daniel Reynolds');
@@ -48,7 +48,7 @@ export default function App() {
             <Grid xs={12} lg={3}>
               <Paper elevation={3} sx={{p: 1.5}}>
                 <VerticalToggleMenu 
-                  handleClick={setActiveComponent}/>
+                  handleClick={setActiveForm}/>
               </Paper>
             </Grid>
 
@@ -64,7 +64,7 @@ export default function App() {
               </Paper>
               
               <VerticalForm
-                isActive={activeComponent}
+                isActive={activeForm}
                 nameValue={fullName}
                 nameChange={handleNameChange}
                 emailValue={email}
@@ -97,8 +97,13 @@ export default function App() {
 
 /* 
 https://sharkri.github.io/cv-application/
-https://mui.com/material-ui/react-button/
-https://mui.com/material-ui/react-stack/
-https://mui.com/material-ui/material-icons/
+https://mui.com/material-ui/react-accordion/
+https://mui.com/system/getting-started/the-sx-prop/
+https://mui.com/material-ui/material-icons/?query=pin
 https://mui.com/system/spacing/
- */
+https://mui.com/system/borders/
+https://mui.com/material-ui/react-text-field/
+https://mui.com/material-ui/react-list/
+https://react.dev/learn/rendering-lists
+https://react.dev/learn/choosing-the-state-structure
+*/
