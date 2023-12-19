@@ -8,9 +8,15 @@ import VerticalToggleMenu from './VerticalToggleMenu.jsx';
 import VerticalForm from './VerticalForm.jsx';
 import Resume from './Resume.jsx';
 
+import { basicPersonalData, basicEducationData, basicExperienceData } from './data.js';
+
 import './App.scss';
 
 export default function App() {
+
+  const initialPDItems = basicPersonalData;
+  const initialItemsED = basicEducationData;
+  const initialItemsEX = basicExperienceData;
 
   const [activeForm, setActiveForm] = useState('Content');
 
