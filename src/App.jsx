@@ -41,10 +41,8 @@ export default function App() {
   function handleAddressChange (e) {
     setAddress(e.target.value);
   }
-/*
-  let initialItemsED = basicEducationData;
-  let initialItemsEX = basicExperienceData;*/
 
+  // state from AccordionEDEX component
   const [initialItemsED, setInitialItemsED] = useState(basicEducationData);
   const [initialItemsEX, setInitialItemsEX] = useState(basicExperienceData);
 
