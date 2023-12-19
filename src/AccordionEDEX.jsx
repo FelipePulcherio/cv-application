@@ -83,20 +83,28 @@ function MyAccordion ({
   const [items, setItems] = useState(initialItems);
 
   function handleAddItem() {
-    if (accordionNumber === 1) {
-      setItems([
-      ...items,
-      { id: uuidv4(), visible: true, title1: 'School', value1: 'New', title2: 'Degree', value2: '', value3: '', value4: '', value5: '', value6: '' }
-    ])
-    } else {
-      setItems([
-        ...items,
-        { id: uuidv4(), visible: true, title1: 'Company Name', value1: 'New', title2: 'Position Title', value2: '', value3: '', value4: '', value5: '', value6: '' }
-      ])
+    const addItem = { id: uuidv4(), visible: true, title1: '', value1: 'New', title2: '', value2: '', value3: '', value4: '', value5: '', value6: '' }
+
+    if (accordionNumber == 1) {
+      addItem.title1 = 'School'
+      addItem.title2 = 'Degree'
+    } else if (accordionNumber == 2) {
+      addItem.title1 = 'Company Name'
+      addItem.title2 = 'Position Title'
     }
+
+    setItems([...items, addItem ])
   }
 
   function handleUpdateItem(updatedItem) {  
+    if (accordionNumber == 1) {
+      updatedItem.title1 = 'School'
+      updatedItem.title2 = 'Degree'
+    } else if (accordionNumber == 2) {
+      updatedItem.title1 = 'Company Name'
+      updatedItem.title2 = 'Position Title'
+    }
+
     setItems(items.map(item => {
       if (item.id === updatedItem.id) {
         return updatedItem;
@@ -111,8 +119,6 @@ function MyAccordion ({
       items.filter(item => item.id !== itemId)
     );
   }
-
-  const [isVisible, setIsVisible] = useState(true);
 
   function handleIconClick(itemId) {
     const clickedObject = items.filter(item => item.id == itemId);
@@ -237,7 +243,7 @@ function OptionsExpanded ({
     setNewValue6ED(e.target.value);
   }
 
-  const updatedItem = { id: itemId, title1: 'School', value1: newValue1ED, title2:'Degree', value2: newValue2ED, value3: newValue3ED, value4: newValue4ED, value5: newValue5ED, value6: newValue6ED}
+  const updatedItem = { id: itemId, visible: true, title1: '', value1: newValue1ED, title2:'', value2: newValue2ED, value3: newValue3ED, value4: newValue4ED, value5: newValue5ED, value6: newValue6ED}
 
   return (
     <Box
