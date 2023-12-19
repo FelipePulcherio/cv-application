@@ -5,6 +5,9 @@ import './BasicFill.scss';
 
 
 export default function BasicFill ({
+  initialPDItems,
+  initialItemsED,
+  initialItemsEX,
   nameChange,
   emailChange,
   phoneChange,
@@ -18,10 +21,10 @@ export default function BasicFill ({
   }
 
   function loadExampleForm () {
-    nameChange('Daniel Reynolds');
-    emailChange('daniel.reynolds@provider.com');
-    phoneChange('+1 123 456 7890');
-    addressChange('New Westminster, BC');
+    nameChange(initialPDItems.fullName);
+    emailChange(initialPDItems.email);
+    phoneChange(initialPDItems.phone);
+    addressChange(initialPDItems.address);
   }
 
   return (

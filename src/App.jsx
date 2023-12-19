@@ -15,31 +15,31 @@ import './App.scss';
 export default function App() {
 
   const initialPDItems = basicPersonalData;
-  const initialItemsED = basicEducationData;
-  const initialItemsEX = basicExperienceData;
+  let initialItemsED = basicEducationData;
+  let initialItemsEX = basicExperienceData;
 
   const [activeForm, setActiveForm] = useState('Content');
 
 
-  const [fullName, setFullName] = useState('Daniel Reynolds');
+  const [fullName, setFullName] = useState(initialPDItems.fullName);
 
   function handleNameChange (e) {
     setFullName(e.target.value);
   }
 
-  const [email, setEmail] = useState('daniel.reynolds@provider.com');
+  const [email, setEmail] = useState(initialPDItems.email);
 
   function handleEmailChange (e) {
     setEmail(e.target.value);
   }
 
-  const [phone, setPhone] = useState('+1 123 456 7890');
+  const [phone, setPhone] = useState(initialPDItems.phone);
 
   function handlePhoneChange (e) {
     setPhone(e.target.value);
   }
 
-  const [address, setAddress] = useState('New Westminster, BC');
+  const [address, setAddress] = useState(initialPDItems.address);
 
   function handleAddressChange (e) {
     setAddress(e.target.value);
@@ -62,6 +62,9 @@ export default function App() {
 
               <Paper elevation={3} sx={{p: 1.5, mb: 2.5}}>
                 <BasicFill 
+                  initialPDItems={initialPDItems}
+                  initialItemsED={initialItemsED}
+                  initialItemsEX={initialItemsEX}
                   nameChange={setFullName}
                   emailChange={setEmail}
                   phoneChange={setPhone}
