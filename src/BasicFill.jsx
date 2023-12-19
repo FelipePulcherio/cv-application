@@ -5,26 +5,33 @@ import './BasicFill.scss';
 
 
 export default function BasicFill ({
-  initialPDItems,
-  initialItemsED,
-  initialItemsEX,
-  nameChange,
-  emailChange,
-  phoneChange,
-  addressChange
+  basicPersonalData,
+  setFullName,
+  setEmail,
+  setPhone,
+  setAddress,
+  basicEducationData,
+  setInitialItemsED,
+  basicExperienceData,
+  setInitialItemsEX,
 }) {
+  
   function clearAllForms () {
-    nameChange('');
-    emailChange('');
-    phoneChange('');
-    addressChange('');
+    setFullName('');
+    setEmail('');
+    setPhone('');
+    setAddress('');
+    setInitialItemsED([]);
+    setInitialItemsEX([]);
   }
 
   function loadExampleForm () {
-    nameChange(initialPDItems.fullName);
-    emailChange(initialPDItems.email);
-    phoneChange(initialPDItems.phone);
-    addressChange(initialPDItems.address);
+    setFullName(basicPersonalData.fullName);
+    setEmail(basicPersonalData.email);
+    setPhone(basicPersonalData.phone);
+    setAddress(basicPersonalData.address);
+    setInitialItemsED(basicEducationData);
+    setInitialItemsEX(basicExperienceData);
   }
 
   return (
