@@ -22,7 +22,9 @@ import AddIcon from '@mui/icons-material/Add';
 
 export default function AccordionEDEX ({
   initialItemsED,
-  initialItemsEX
+  setInitialItemsED,
+  initialItemsEX,
+  setInitialItemsEX
 }) {
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -33,7 +35,8 @@ export default function AccordionEDEX ({
         isActive={activeIndex === 1}
         activeIndex={activeIndex}
         setActiveIndex={setActiveIndex}
-        initialItems={initialItemsED}
+        items={initialItemsED}
+        setItems={setInitialItemsED}
         mainTitle={'Education'}
         mainIcon={<SchoolIcon />}
       />
@@ -42,7 +45,8 @@ export default function AccordionEDEX ({
         isActive={activeIndex === 2}
         activeIndex={activeIndex}
         setActiveIndex={setActiveIndex}
-        initialItems={initialItemsEX}
+        items={initialItemsEX}
+        setItems={setInitialItemsEX}
         mainTitle={'Experience'}
         mainIcon={<WorkIcon />}
       />
@@ -55,7 +59,8 @@ function MyAccordion ({
   isActive, 
   activeIndex,
   setActiveIndex,
-  initialItems,
+  items,
+  setItems,
   mainTitle,
   mainIcon
   }) {
@@ -73,7 +78,8 @@ function MyAccordion ({
     }
   }
 
-  const [items, setItems] = useState(initialItems);
+  // Raised this state to App
+  //const [items, setItems] = useState(initialItems)
 
   function handleAddItem() {
     const addItem = { id: uuidv4(), visible: true, title1: '', value1: 'New', title2: '', value2: '', value3: '', value4: '', value5: '', value6: '' }
@@ -104,13 +110,13 @@ function MyAccordion ({
       } else {
         return item;
       }
-    }));
+    }))
   }
   
   function handleDeleteItem(itemId) {
     setItems(
       items.filter(item => item.id !== itemId)
-    );
+    )
   }
 
   function handleIconClick(itemId) {

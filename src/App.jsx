@@ -15,11 +15,8 @@ import './App.scss';
 export default function App() {
 
   const initialPDItems = basicPersonalData;
-  let initialItemsED = basicEducationData;
-  let initialItemsEX = basicExperienceData;
-
+  
   const [activeForm, setActiveForm] = useState('Content');
-
 
   const [fullName, setFullName] = useState(initialPDItems.fullName);
 
@@ -44,6 +41,13 @@ export default function App() {
   function handleAddressChange (e) {
     setAddress(e.target.value);
   }
+/*
+  let initialItemsED = basicEducationData;
+  let initialItemsEX = basicExperienceData;*/
+
+  const [initialItemsED, setInitialItemsED] = useState(basicEducationData);
+  const [initialItemsEX, setInitialItemsEX] = useState(basicExperienceData);
+
 
   return (
     <Box sx={{p: 2.5}}>
@@ -83,7 +87,9 @@ export default function App() {
                 addressValue={address}
                 addressChange={handleAddressChange}
                 initialItemsED={initialItemsED}
+                setInitialItemsED={setInitialItemsED}
                 initialItemsEX={initialItemsEX}
+                setInitialItemsEX={setInitialItemsEX}
                 />
             </Grid>
           </Grid>

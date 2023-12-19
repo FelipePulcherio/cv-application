@@ -100,7 +100,9 @@ export default function VerticalForm ({
     addressValue,
     addressChange,
     initialItemsED,
-    initialItemsEX
+    setInitialItemsED,
+    initialItemsEX,
+    setInitialItemsEX
   }) {
     return (
       <>
@@ -121,7 +123,9 @@ export default function VerticalForm ({
                   />
                   <AccordionEDEX 
                     initialItemsED={initialItemsED}
+                    setInitialItemsED={setInitialItemsED}
                     initialItemsEX={initialItemsEX}
+                    setInitialItemsEX={setInitialItemsEX}
                   />
                 </>
                 );
