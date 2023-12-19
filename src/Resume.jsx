@@ -97,29 +97,33 @@ function Education ({
   initialItemsED
 }) {
   return (
-    <Box 
-      className='resumeEducation'
-      sx={{
-        p: 5,
-        pt: 0,
-        pb: 0
-      }}
-      >
-      <Box sx={{          
-        fontSize: 'h5.fontSize', 
-        fontWeight:600, 
-        textAlign:'center',
-        bgcolor: '#eef1f2',
-        p: 0.3,
-        mb: 2
-        }}
-        >
-        Education
-      </Box>
-      <EducationSlot 
-        initialItemsED={initialItemsED}
-      />
-    </Box>
+    <>
+      {(initialItemsED.length > 0) &&
+        <Box 
+          className='resumeEducation'
+          sx={{
+            p: 5,
+            pt: 0,
+            pb: 0
+          }}
+          >
+          <Box sx={{          
+            fontSize: 'h5.fontSize', 
+            fontWeight:600, 
+            textAlign:'center',
+            bgcolor: '#eef1f2',
+            p: 0.3,
+            mb: 2
+            }}
+            >
+            Education
+          </Box>
+          <EducationSlot 
+            initialItemsED={initialItemsED}
+          />
+        </Box>
+      }
+    </>
   )
 }
 
@@ -160,28 +164,32 @@ function Experience ({
   initialItemsEX
 }) {
   return (
-    <Box 
-      className='resumeExperience'
-      sx={{
-        p: 5,
-        pt: 0
-      }}
-      >
-      <Box sx={{          
-        fontSize: 'h5.fontSize', 
-        fontWeight:600, 
-        textAlign:'center',
-        bgcolor: '#eef1f2',
-        p: 0.3,
-        mb: 2
-        }}
-        >
-        Professional Experience
-      </Box>
-      <ExperienceSlot 
-        initialItemsEX={initialItemsEX}
-      />
-    </Box>
+    <>
+      {(initialItemsEX.length > 0) &&
+        <Box 
+          className='resumeExperience'
+          sx={{
+            p: 5,
+            pt: 0
+          }}
+          >
+          <Box sx={{          
+            fontSize: 'h5.fontSize', 
+            fontWeight:600, 
+            textAlign:'center',
+            bgcolor: '#eef1f2',
+            p: 0.3,
+            mb: 2
+            }}
+            >
+            Professional Experience
+          </Box>
+          <ExperienceSlot 
+            initialItemsEX={initialItemsEX}
+          />
+        </Box>
+      }
+    </>
   )
 }
 
