@@ -68,30 +68,34 @@ function Heading ({
   )
 }
 
-function EducationSlot () {
+function EducationSlot ({
+  initialItemsED
+}) {
   return (
     <Box sx={{mb: 4}}>
       <Grid container spacing={2} sx={{mb: 1}}>
         <Grid xs={5}>
-          <Box>08/2020 - present</Box>
+          <Box>{initialItemsED[0].value3} - {initialItemsED[0].value4}</Box>
         </Grid>
         <Grid xs={7}>
-          <Box sx={{fontWeight: 'bold'}}>London City University</Box>
+          <Box sx={{fontWeight: 'bold'}}>{initialItemsED[0].value1}</Box>
         </Grid>
       </Grid>
       <Grid container spacing={2}>
         <Grid xs={5}>
-          <Box>New York City, US</Box>
+          <Box>{initialItemsED[0].value5}</Box>
         </Grid>
         <Grid xs={7}>
-          <Box>Bachelors in Economics</Box>
+          <Box>{initialItemsED[0].value2}</Box>
         </Grid>
       </Grid>
     </Box>
   )
 }
 
-function Education () {
+function Education ({
+  initialItemsED
+}) {
   return (
     <Box 
       className='resumeEducation'
@@ -112,28 +116,32 @@ function Education () {
         >
         Education
       </Box>
-      <EducationSlot />
+      <EducationSlot 
+        initialItemsED={initialItemsED}
+      />
     </Box>
   )
 }
 
-function ExperienceSlot () {
+function ExperienceSlot ({
+  initialItemsEX
+}) {
   return (
     <Box sx={{mb: 4}}>
       <Grid container spacing={2} sx={{mb: 1}}>
         <Grid xs={5}>
-          <Box>08/2020 - present</Box>
+          <Box>{initialItemsEX[0].value3} - {initialItemsEX[0].value4}</Box>
         </Grid>
         <Grid xs={7}>
-          <Box sx={{fontWeight: 'bold'}}>Umbrella Inc.</Box>
+          <Box sx={{fontWeight: 'bold'}}>{initialItemsEX[0].value1}</Box>
         </Grid>
       </Grid>
       <Grid container spacing={2} sx={{mb: 1}}>
         <Grid xs={5}>
-          <Box>New York City, US</Box>
+          <Box>{initialItemsEX[0].value5}</Box>
         </Grid>
         <Grid xs={7}>
-          <Box>UI & UX Designer</Box>
+          <Box>{initialItemsEX[0].value2}</Box>
         </Grid>
       </Grid>
       <Grid container spacing={2}>
@@ -141,14 +149,16 @@ function ExperienceSlot () {
           <Box></Box>
         </Grid>
         <Grid xs={7}>
-          <Box>Designed and prototyped user interface patterns for various clients in various industries, ranging from self-service apps within the telecommunications-sector to mobile games for IOS and Android</Box>
+          <Box>{initialItemsEX[0].value6}</Box>
         </Grid>
       </Grid>
     </Box>
   )
 }
 
-function Experience () {
+function Experience ({
+  initialItemsEX
+}) {
   return (
     <Box 
       className='resumeExperience'
@@ -168,7 +178,9 @@ function Experience () {
         >
         Professional Experience
       </Box>
-      <ExperienceSlot />
+      <ExperienceSlot 
+        initialItemsEX={initialItemsEX}
+      />
     </Box>
   )
 }
@@ -177,7 +189,9 @@ export default function Resume ({
   fullName,
   email,
   phone,
-  address
+  address,
+  initialItemsED,
+  initialItemsEX
 }) {
   return (
     <Paper elevation={3}>
@@ -187,8 +201,12 @@ export default function Resume ({
         phone={phone}
         address={address}
       />
-      <Education />
-      <Experience />
+      <Education 
+        initialItemsED={initialItemsED}
+      />
+      <Experience 
+        initialItemsEX={initialItemsEX}
+      />
     </Paper>
   )
 }

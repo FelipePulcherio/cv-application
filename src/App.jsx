@@ -97,6 +97,8 @@ export default function App() {
                 email={email}
                 phone={phone}
                 address={address}
+                initialItemsED={initialItemsED}
+                initialItemsEX={initialItemsEX}
               />
             </Grid>
           </Grid>
