@@ -14,29 +14,27 @@ import './App.scss';
 
 export default function App() {
 
-  const initialPDItems = basicPersonalData;
-  
   const [activeForm, setActiveForm] = useState('Content');
 
-  const [fullName, setFullName] = useState(initialPDItems.fullName);
+  const [fullName, setFullName] = useState(basicPersonalData.fullName);
 
   function handleNameChange (e) {
     setFullName(e.target.value);
   }
 
-  const [email, setEmail] = useState(initialPDItems.email);
+  const [email, setEmail] = useState(basicPersonalData.email);
 
   function handleEmailChange (e) {
     setEmail(e.target.value);
   }
 
-  const [phone, setPhone] = useState(initialPDItems.phone);
+  const [phone, setPhone] = useState(basicPersonalData.phone);
 
   function handlePhoneChange (e) {
     setPhone(e.target.value);
   }
 
-  const [address, setAddress] = useState(initialPDItems.address);
+  const [address, setAddress] = useState(basicPersonalData.address);
 
   function handleAddressChange (e) {
     setAddress(e.target.value);
@@ -64,14 +62,16 @@ export default function App() {
 
               <Paper elevation={3} sx={{p: 1.5, mb: 2.5}}>
                 <BasicFill 
-                  initialPDItems={initialPDItems}
-                  initialItemsED={initialItemsED}
-                  initialItemsEX={initialItemsEX}
-                  nameChange={setFullName}
-                  emailChange={setEmail}
-                  phoneChange={setPhone}
-                  addressChange={setAddress}
-                />
+                  basicPersonalData={basicPersonalData}
+                  setFullName={setFullName}
+                  setEmail={setEmail}
+                  setPhone={setPhone}
+                  setAddress={setAddress}
+                  basicEducationData={basicEducationData}
+                  setInitialItemsED={setInitialItemsED}
+                  basicExperienceData={basicExperienceData}
+                  setInitialItemsEX={setInitialItemsEX}
+                  />
               </Paper>
               
               <VerticalForm
