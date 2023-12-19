@@ -82,6 +82,8 @@ export default function App() {
                 phoneChange={handlePhoneChange}
                 addressValue={address}
                 addressChange={handleAddressChange}
+                initialItemsED={initialItemsED}
+                initialItemsEX={initialItemsEX}
                 />
             </Grid>
           </Grid>

@@ -98,7 +98,9 @@ export default function VerticalForm ({
     phoneValue,
     phoneChange,
     addressValue,
-    addressChange
+    addressChange,
+    initialItemsED,
+    initialItemsEX
   }) {
     return (
       <>
@@ -117,7 +119,10 @@ export default function VerticalForm ({
                     addressValue={addressValue}
                     addressChange={addressChange}
                   />
-                  <AccordionEDEX />
+                  <AccordionEDEX 
+                    initialItemsED={initialItemsED}
+                    initialItemsEX={initialItemsEX}
+                  />
                 </>
                 );
             case 'Customize':
