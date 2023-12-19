@@ -147,7 +147,7 @@ function MyAccordion ({
       <>
         {isExpanded ? (
           <OptionsExpanded 
-            setIsExpanded={setIsExpanded} handleUpdateItem={handleUpdateItem} handleDeleteItem={handleDeleteItem} items={items} itemId={isClicked}
+            setIsExpanded={setIsExpanded} handleUpdateItem={handleUpdateItem} handleDeleteItem={handleDeleteItem} items={items} itemId={isClicked} required={(accordionNumber == 2) && true}
           />
         ) : ( 
           <List>{newItems}</List>
