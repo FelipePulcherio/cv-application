@@ -12,24 +12,24 @@ const basicEducationData = [
     id: uuidv4(), 
     visible: true, 
     title1: 'School', 
-    value1:'London City University', 
-    title2:'Degree', 
-    value2: 'Bachelors in Economics', 
-    value3: '08/2020', 
-    value4: 'present', 
-    value5: 'New York City, US', 
+    value1: 'University of British Columbia', 
+    title2: 'Degree', 
+    value2: 'Bachelors in Computer Science', 
+    value3: '05/2020', 
+    value4: '05/2023', 
+    value5: 'Vancouver, CA', 
     value6: ''
   },
   { 
     id: uuidv4(), 
     visible: false, 
     title1: 'School', 
-    value1:'Hidden University', 
-    title2:'Degree', 
-    value2: 'Masters Degree in Math', 
-    value3: '08/2020', 
-    value4: 'present', 
-    value5: 'New York City, US', 
+    value1: 'Hidden University', 
+    title2: 'Degree', 
+    value2: 'Masters Degree in Physics', 
+    value3: '01/2018', 
+    value4: '01/2020', 
+    value5: 'Toronto, CA', 
     value6: ''
   }
 ]
@@ -39,25 +39,25 @@ const basicExperienceData = [
     id: uuidv4(), 
     visible: true, 
     title1: 'Company Name', 
-    value1:'Umbrella Inc.', 
-    title2:'Position Title', 
-    value2: 'UI & UX Designer', 
-    value3: '08/2020', 
-    value4: 'present', 
-    value5: 'New York City, US', 
-    value6: 'Designed and prototyped user interface patterns for various clients in various industries, ranging from self-service apps within the telecommunications-sector to mobile games for IOS and Android.'
+    value1: 'Web Builders', 
+    title2: 'Position Title', 
+    value2: 'Software Developer', 
+    value3: '05/2020', 
+    value4: 'Present', 
+    value5: 'Vancouver, CA', 
+    value6: 'Designed and prototyped softwares for various clients in various industries, ranging from LIMS within the laboratorial-sector to mobile games for IOS and Android.'
   },
   { 
     id: uuidv4(), 
     visible: false, 
     title1: 'Company Name', 
-    value1:'Black Mesa Labs', 
-    title2:'Position Title', 
-    value2: 'UX Research Assistant', 
-    value3: '04/2018', 
-    value4: '02/2019', 
-    value5: 'Berlin, Germany', 
-    value6: 'Supported senior researchers on accessibility standards for the open web. Created and usability tested wireframes and prototypes. Produced interactive documentation for quick onboarding of new researchers.'
+    value1: 'CERN', 
+    title2: 'Position Title', 
+    value2: 'Nuclear Engineer', 
+    value3: '01/2017', 
+    value4: '04/2020', 
+    value5: 'Meyrin, Switzerland', 
+    value6: 'Led a group of researchers on nuclear fission experiments. Conducted experiments for CA government.'
   }
 ]
 
