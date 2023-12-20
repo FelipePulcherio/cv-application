@@ -71,26 +71,31 @@ function Heading ({
 function EducationSlot ({
   initialItemsED
 }) {
-  return (
-    <Box sx={{mb: 4}}>
-      <Grid container spacing={2} sx={{mb: 1}}>
-        <Grid xs={5}>
-          <Box>{initialItemsED[0].value3} - {initialItemsED[0].value4}</Box>
+
+  const newSlots = initialItemsED.map( (item) =>
+    (item.visible) && (
+      <Box sx={{mb: 4}}>
+        <Grid container spacing={2} sx={{mb: 1}}>
+          <Grid xs={5}>
+            <Box>{item.value3} - {item.value4}</Box>
+          </Grid>
+          <Grid xs={7}>
+            <Box sx={{fontWeight: 'bold'}}>{item.value1}</Box>
+          </Grid>
         </Grid>
-        <Grid xs={7}>
-          <Box sx={{fontWeight: 'bold'}}>{initialItemsED[0].value1}</Box>
+        <Grid container spacing={2}>
+          <Grid xs={5}>
+            <Box>{item.value5}</Box>
+          </Grid>
+          <Grid xs={7}>
+            <Box>{item.value2}</Box>
+          </Grid>
         </Grid>
-      </Grid>
-      <Grid container spacing={2}>
-        <Grid xs={5}>
-          <Box>{initialItemsED[0].value5}</Box>
-        </Grid>
-        <Grid xs={7}>
-          <Box>{initialItemsED[0].value2}</Box>
-        </Grid>
-      </Grid>
-    </Box>
+      </Box>
+    )
   )
+
+  return ( <>{newSlots}</> )
 }
 
 function Education ({
@@ -130,34 +135,39 @@ function Education ({
 function ExperienceSlot ({
   initialItemsEX
 }) {
-  return (
-    <Box sx={{mb: 4}}>
-      <Grid container spacing={2} sx={{mb: 1}}>
-        <Grid xs={5}>
-          <Box>{initialItemsEX[0].value3} - {initialItemsEX[0].value4}</Box>
+
+  const newSlots = initialItemsEX.map( (item) =>
+    (item.visible) && (
+      <Box sx={{mb: 4}}>
+        <Grid container spacing={2} sx={{mb: 1}}>
+          <Grid xs={5}>
+            <Box>{item.value3} - {item.value4}</Box>
+          </Grid>
+          <Grid xs={7}>
+            <Box sx={{fontWeight: 'bold'}}>{item.value1}</Box>
+          </Grid>
         </Grid>
-        <Grid xs={7}>
-          <Box sx={{fontWeight: 'bold'}}>{initialItemsEX[0].value1}</Box>
+        <Grid container spacing={2} sx={{mb: 1}}>
+          <Grid xs={5}>
+            <Box>{item.value5}</Box>
+          </Grid>
+          <Grid xs={7}>
+            <Box>{item.value2}</Box>
+          </Grid>
         </Grid>
-      </Grid>
-      <Grid container spacing={2} sx={{mb: 1}}>
-        <Grid xs={5}>
-          <Box>{initialItemsEX[0].value5}</Box>
+        <Grid container spacing={2}>
+          <Grid xs={5}>
+            <Box></Box>
+          </Grid>
+          <Grid xs={7}>
+            <Box>{item.value6}</Box>
+          </Grid>
         </Grid>
-        <Grid xs={7}>
-          <Box>{initialItemsEX[0].value2}</Box>
-        </Grid>
-      </Grid>
-      <Grid container spacing={2}>
-        <Grid xs={5}>
-          <Box></Box>
-        </Grid>
-        <Grid xs={7}>
-          <Box>{initialItemsEX[0].value6}</Box>
-        </Grid>
-      </Grid>
-    </Box>
+      </Box>
+    )
   )
+
+  return ( <>{newSlots}</> )
 }
 
 function Experience ({
