@@ -1,5 +1,7 @@
 import { useState } from 'react';
+import { ThemeProvider } from '@mui/material/styles';
 import Box from '@mui/material/Box';
+import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
 import Paper from '@mui/material/Paper';
 import AccordionEDEX from './AccordionEDEX.jsx';
@@ -84,8 +86,31 @@ function ContentFormPD ({
 }
 
 // 'Customize' Form
-function CustomizeForm () {
-  return <div>Component 2B</div>
+function CustomizeForm ({
+  color,
+  setColor
+}) {
+
+  return (
+    <>
+      <Paper elevation={3} sx={{p: 1.5, mb: 2.5}}>
+        <Box
+          sx={{
+            fontSize: 'h5.fontSize',
+            fontWeight:600,
+            textAlign:'center',
+            mb:2.5
+          }}
+        >
+          Color
+        </Box>
+        <Stack direction='row' gap={2} flexWrap="wrap" justifyContent='start' alignItems='center' sx={{mb: 1.5}}>
+          <Box sx={{fontWeight: 600}}>Accent Color</Box>
+          <input type='color' value={color} onChange={e => setColor(e.target.value)}></input>
+        </Stack>
+      </Paper>
+    </>
+  )
 }
 
 // Main function
@@ -102,7 +127,9 @@ export default function VerticalForm ({
     initialItemsED,
     setInitialItemsED,
     initialItemsEX,
-    setInitialItemsEX
+    setInitialItemsEX,
+    color,
+    setColor
   }) {
     return (
       <>
@@ -130,7 +157,10 @@ export default function VerticalForm ({
                 </>
                 );
             case 'Customize':
-              return <CustomizeForm />;
+              return <CustomizeForm 
+                color={color}
+                setColor={setColor}
+              />;
           }
         })()}
       </>

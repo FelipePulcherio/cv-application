@@ -16,7 +16,8 @@ function Heading ({
     <Box 
       className='resumeHeading'
       sx={{
-        color: 'white',
+        fontFamily: 'fontFamily',
+        color: 'primary.contrastText',
         bgcolor: 'primary.main',
         p: 1.5, 
         mb:5
@@ -74,7 +75,7 @@ function EducationSlot ({
 
   const newSlots = initialItemsED.map( (item) =>
     (item.visible) && (
-      <Box sx={{mb: 4}}>
+      <Box sx={{fontFamily: 'fontFamily', mb: 4}}>
         <Grid container spacing={2} sx={{mb: 1}}>
           <Grid xs={5}>
             <Box>{item.value3} - {item.value4}</Box>
@@ -107,12 +108,14 @@ function Education ({
         <Box 
           className='resumeEducation'
           sx={{
+            fontFamily: 'fontFamily',
             p: 5,
             pt: 0,
             pb: 0
           }}
           >
-          <Box sx={{          
+          <Box sx={{        
+            fontFamily: 'fontFamily',  
             fontSize: 'h5.fontSize', 
             fontWeight:600, 
             textAlign:'center',
@@ -138,7 +141,7 @@ function ExperienceSlot ({
 
   const newSlots = initialItemsEX.map( (item) =>
     (item.visible) && (
-      <Box sx={{mb: 4}}>
+      <Box sx={{fontFamily: 'fontFamily', mb: 4}}>
         <Grid container spacing={2} sx={{mb: 1}}>
           <Grid xs={5}>
             <Box>{item.value3} - {item.value4}</Box>
@@ -179,6 +182,7 @@ function Experience ({
         <Box 
           className='resumeExperience'
           sx={{
+            fontFamily: 'fontFamily',
             p: 5,
             pt: 0
           }}
