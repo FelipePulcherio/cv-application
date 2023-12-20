@@ -61,7 +61,12 @@ export default function App() {
 
 
   return (
-    <Box sx={{p: 2.5}}>
+    <Box sx={{
+      p: 2.5,
+      pt: {lg: 4},
+      pl: {lg: 14.5},
+      pr: {lg: 17}
+    }}>
       <Grid container disableEqualOverflow spacing={2.5}>
         <Grid xs={5} md={4} lg={5}>
           <Grid container columns={12} spacing={2.5}>
@@ -111,7 +116,7 @@ export default function App() {
         <Grid xs={7} md={8} lg={7}>
           <Grid container columns={12}>
             <Grid xs={12}>
-            <ThemeProvider theme={myTheme}>
+              <ThemeProvider theme={myTheme}>
                 <Resume
                   fullName={fullName}
                   email={email}
