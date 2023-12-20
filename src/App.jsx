@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Grid from '@mui/material/Unstable_Grid2';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
 import BasicFill from './BasicFill.jsx';
 import VerticalToggleMenu from './VerticalToggleMenu.jsx';
