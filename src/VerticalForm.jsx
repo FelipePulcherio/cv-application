@@ -88,7 +88,8 @@ function ContentFormPD ({
 // 'Customize' Form
 function CustomizeForm ({
   color,
-  setColor
+  setColor,
+  setFont
 }) {
 
   const [clicked, setClicked] = useState(1)
@@ -125,7 +126,7 @@ function CustomizeForm ({
         </Box>
         
         <Stack direction='row' flexWrap="wrap" justifyContent='space-around' alignItems='center' sx={{mb: 1.5}}>
-          <Button variant={(clicked === 1) ? 'contained' : 'outlined'} onClick={() => setClicked(1)}
+          <Button variant={(clicked === 1) ? 'contained' : 'outlined'} onClick={() => {setClicked(1); setFont('Serif')}}
             sx={{
               textTransform: 'none',
               fontFamily: 'Serif',
@@ -134,7 +135,7 @@ function CustomizeForm ({
               <Box sx={{fontWeight:600}}>Aa</Box>
               <Box>Serif</Box>
           </Button>
-          <Button variant={(clicked === 2) ? 'contained' : 'outlined'} onClick={() => setClicked(2)}
+          <Button variant={(clicked === 2) ? 'contained' : 'outlined'} onClick={() => {setClicked(2); setFont('Sans')}}
             sx={{
               textTransform: 'none',
               fontFamily: 'Sans',
@@ -143,7 +144,7 @@ function CustomizeForm ({
               <Box sx={{fontWeight:600}}>Aa</Box>
               <Box>Sans</Box>
           </Button>
-          <Button variant={(clicked === 3) ? 'contained' : 'outlined'} onClick={() => setClicked(3)}
+          <Button variant={(clicked === 3) ? 'contained' : 'outlined'} onClick={() => {setClicked(3); setFont('Monospace')}}
             sx={{
               textTransform: 'none',
               fontFamily: 'Monospace',
@@ -174,7 +175,8 @@ export default function VerticalForm ({
     initialItemsEX,
     setInitialItemsEX,
     color,
-    setColor
+    setColor,
+    setFont
   }) {
     return (
       <>
@@ -205,6 +207,7 @@ export default function VerticalForm ({
               return <CustomizeForm 
                 color={color}
                 setColor={setColor}
+                setFont={setFont}
               />;
           }
         })()}

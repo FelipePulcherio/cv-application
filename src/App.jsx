@@ -16,6 +16,7 @@ import './App.scss';
 export default function App() {
 
   const [color, setColor] = useState('#1976d2')
+  const [font, setFont] = useState('Serif')
 
   const myTheme = createTheme({
     palette: {
@@ -24,7 +25,7 @@ export default function App() {
       }
     },
     typography: {
-      fontFamily: 'Monospace'
+      fontFamily: font
     }
   })
 
@@ -101,6 +102,7 @@ export default function App() {
                 setInitialItemsEX={setInitialItemsEX}
                 color={color}
                 setColor={setColor}
+                setFont={setFont}
                 />
             </Grid>
           </Grid>
