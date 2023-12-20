@@ -56,7 +56,7 @@ const basicExperienceData = [
     value2: 'Nuclear Engineer', 
     value3: '01/2017', 
     value4: '04/2020', 
-    value5: 'Meyrin, Switzerland', 
+    value5: 'Meyrin, CH', 
     value6: 'Led a group of researchers on nuclear fission experiments. Conducted experiments for CA government.'
   }
 ]
