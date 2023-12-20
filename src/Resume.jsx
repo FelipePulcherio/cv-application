@@ -6,6 +6,32 @@ import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import PlaceIcon from '@mui/icons-material/Place';
 
+export default function Resume ({
+  fullName,
+  email,
+  phone,
+  address,
+  initialItemsED,
+  initialItemsEX
+}) {
+  return (
+    <Paper elevation={3}>
+      <Heading 
+        fullName={fullName}
+        email={email}
+        phone={phone}
+        address={address}
+      />
+      <Education 
+        initialItemsED={initialItemsED}
+      />
+      <Experience 
+        initialItemsEX={initialItemsEX}
+      />
+    </Paper>
+  )
+}
+
 function Heading ({
   fullName,
   email,
@@ -75,7 +101,7 @@ function EducationSlot ({
 
   const newSlots = initialItemsED.map( (item) =>
     (item.visible) && (
-      <Box sx={{fontFamily: 'fontFamily', mb: 4}}>
+      <Box sx={{fontFamily: 'fontFamily', mb: 4, pl: 4}}>
         <Grid container spacing={2} sx={{mb: 1}}>
           <Grid xs={5} lg={3}>
             <Box>{item.value3} - {item.value4}</Box>
@@ -141,7 +167,7 @@ function ExperienceSlot ({
 
   const newSlots = initialItemsEX.map( (item) =>
     (item.visible) && (
-      <Box sx={{fontFamily: 'fontFamily', mb: 4}}>
+      <Box sx={{fontFamily: 'fontFamily', mb: 4, pl: 4}}>
         <Grid container spacing={2} sx={{mb: 1}}>
           <Grid xs={5} lg={3}>
             <Box>{item.value3} - {item.value4}</Box>
@@ -204,31 +230,5 @@ function Experience ({
         </Box>
       }
     </>
-  )
-}
-
-export default function Resume ({
-  fullName,
-  email,
-  phone,
-  address,
-  initialItemsED,
-  initialItemsEX
-}) {
-  return (
-    <Paper elevation={3}>
-      <Heading 
-        fullName={fullName}
-        email={email}
-        phone={phone}
-        address={address}
-      />
-      <Education 
-        initialItemsED={initialItemsED}
-      />
-      <Experience 
-        initialItemsEX={initialItemsEX}
-      />
-    </Paper>
   )
 }
