@@ -77,18 +77,18 @@ function EducationSlot ({
     (item.visible) && (
       <Box sx={{fontFamily: 'fontFamily', mb: 4}}>
         <Grid container spacing={2} sx={{mb: 1}}>
-          <Grid xs={5}>
+          <Grid xs={5} lg={3}>
             <Box>{item.value3} - {item.value4}</Box>
           </Grid>
-          <Grid xs={7}>
+          <Grid xs={7} lg={9}>
             <Box sx={{fontWeight: 'bold'}}>{item.value1}</Box>
           </Grid>
         </Grid>
         <Grid container spacing={2}>
-          <Grid xs={5}>
+          <Grid xs={5} lg={3}>
             <Box>{item.value5}</Box>
           </Grid>
-          <Grid xs={7}>
+          <Grid xs={7} lg={9}>
             <Box>{item.value2}</Box>
           </Grid>
         </Grid>
@@ -143,26 +143,26 @@ function ExperienceSlot ({
     (item.visible) && (
       <Box sx={{fontFamily: 'fontFamily', mb: 4}}>
         <Grid container spacing={2} sx={{mb: 1}}>
-          <Grid xs={5}>
+          <Grid xs={5} lg={3}>
             <Box>{item.value3} - {item.value4}</Box>
           </Grid>
-          <Grid xs={7}>
+          <Grid xs={7} lg={9}>
             <Box sx={{fontWeight: 'bold'}}>{item.value1}</Box>
           </Grid>
         </Grid>
         <Grid container spacing={2} sx={{mb: 1}}>
-          <Grid xs={5}>
+          <Grid xs={5} lg={3}>
             <Box>{item.value5}</Box>
           </Grid>
-          <Grid xs={7}>
+          <Grid xs={7} lg={9}>
             <Box>{item.value2}</Box>
           </Grid>
         </Grid>
         <Grid container spacing={2}>
-          <Grid xs={5}>
+          <Grid xs={5} lg={3}>
             <Box></Box>
           </Grid>
-          <Grid xs={7}>
+          <Grid xs={7} lg={9}>
             <Box>{item.value6}</Box>
           </Grid>
         </Grid>
